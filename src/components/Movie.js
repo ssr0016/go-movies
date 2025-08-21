@@ -10,7 +10,7 @@ const Movie = () => {
       id: id,
       title: "Highlander",
       release_date: "1986-03-07",
-      runtime: 116,
+      run_time: 116,
       mpaa_rating: "R",
       description: "Some long description",
     };

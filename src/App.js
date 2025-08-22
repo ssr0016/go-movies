@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 import Alert from "./components/Alert";
+
 function App() {
   const [jwtToken, setJwtToken] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
@@ -58,10 +59,10 @@ function App() {
                     to="/admin/movie/0"
                     className="list-group-item list-group-item-action"
                   >
-                    Add Movies
+                    Add Movie
                   </Link>
                   <Link
-                    to="/admin/manage-catalogue"
+                    to="/manage-catalogue"
                     className="list-group-item list-group-item-action"
                   >
                     Manage Catalogue
@@ -83,8 +84,8 @@ function App() {
             context={{
               jwtToken,
               setJwtToken,
-              setAlertMessage,
               setAlertClassName,
+              setAlertMessage,
             }}
           />
         </div>
